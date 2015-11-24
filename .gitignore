@@ -3,6 +3,7 @@
 .pub/
 build/
 packages
+.packages
 
 # Or the files created by dart2js.
 *.dart.js
@@ -10,5 +11,10 @@ packages
 *.js.deps
 *.js.map
 
+# Webstorm files
+*.ipr
+*.iws
+.idea/
+
 # Include when developing application packages.
-pubspec.lock
+#pubspec.lock

@@ -1,0 +1,14 @@
+name: html_assembler
+version: 0.0.1
+description: Loads html fragments into the referencing div.
+author: Caleb Shingledecker
+homepage: http://becomingmachinic.com
+dependencies:
+  barback: any
+  html: any
+  code_transformers: ">=0.2.3 <0.3.0"
+
+dev_dependencies:
+  browser: any
+
+transformers:
