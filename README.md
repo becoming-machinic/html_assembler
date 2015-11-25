@@ -4,11 +4,11 @@ _A transformer for pub._
 
 ## Develop your Single-page Application in logical html fragments and run it as a single html file.
 
-I have created several single-page applications using AngularDart. After working on a project for a while more and more time is spent looking for that specific element in a stack of elements. I have created this transformer to allow me to split my html into logical fragments during development, but work with it as a single file during debugging and production.
+I have created several single-page applications using AngularDart. After working on a project for a while, more and more time is spent looking for that specific element in a stack of elements. I have created this transformer to allow me to split my html into logical fragments during development, but work with it as a single file during debugging and production.
 
 ## How it works
 
-This transformer can inline html fragments into the referencing div with an import attribute. The html file will them be processed by any additional transformers such as angular.
+This transformer can inline html fragments into the referencing div with an import attribute. The html file will then be processed by any additional transformers (such as AngularDart).
 
 ## Configuring
 
