@@ -1,11 +1,11 @@
 name: html_assembler
 version: 0.0.1
 description: Loads html fragments into the referencing div.
-author: Caleb Shingledecker
-homepage: http://becomingmachinic.com
+author: Caleb Shingledecker <caleb@becomingmachinic.com>
+homepage: https://github.com/becoming-machinic/html_assembler
 dependencies:
-  barback: any
-  html: any
+  barback: ">=0.15.2 <0.16.0"
+  html: ">=0.12.2 <0.13.0"
   code_transformers: ">=0.2.3 <0.3.0"
 
 dev_dependencies:
