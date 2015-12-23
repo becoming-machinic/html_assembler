@@ -15,8 +15,7 @@ This transformer can inline html fragments into the referencing div with an impo
 Add the dependencies to your pubspec.yaml
 
 	dependencies:
-	  html_assembler:
-		  git: git://github.com/becoming-machinic/html_assembler.git
+	  html_assembler: ">=0.0.1 <0.1.0"
 
 Add the transformer to your pubspec.yaml:
 
