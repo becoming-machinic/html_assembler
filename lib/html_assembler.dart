@@ -25,7 +25,7 @@ class HtmlAssemblerTransformer extends Transformer {
         return tag.attributes['import'].isNotEmpty;
       }).map((tag) {
         var src = tag.attributes['import'];
-        var srcAssetId = uriToAssetId(id, src, transform.logger, tag.sourceSpan);
+        var srcAssetId = uriToAssetId(id, src, transform.logger, tag.sourceSpan,errorOnAbsolute:false);
         transform.logger.info("Importing " + srcAssetId.path);
 
         return transform.readInputAsString(srcAssetId).then((source) {
