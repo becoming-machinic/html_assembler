@@ -1,5 +1,5 @@
 name: html_assembler
-version: 0.0.2
+version: 0.0.3
 description: Loads html fragments into the referencing div.
 author: Caleb Shingledecker <caleb@becomingmachinic.com>
 homepage: https://github.com/becoming-machinic/html_assembler

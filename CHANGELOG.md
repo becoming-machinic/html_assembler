@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Update dependencies.
+
 ## 0.0.2
 
 * Search for an import attribute in any html element type.
