@@ -5,6 +5,8 @@ import 'dart:async' show Future;
 import 'package:html/parser.dart' show parse;
 import 'package:html/dom.dart' show Node;
 import 'package:code_transformers/assets.dart' show uriToAssetId;
+import 'package:barback/barback.dart';
+import 'package:unittest/unittest.dart';
 
 /// Imports html fragments into the referencing div.
 /// reference a fragment with the import="path" attribute
@@ -16,6 +18,7 @@ class HtmlAssemblerTransformer extends Transformer {
 
   Future apply(Transform transform) {
     var id = transform.primaryInput.id;
+    var fragmentId = new AssetId(id.package, "");
 
     transform.logger.info("Processing file $id");
     return transform.primaryInput.readAsString().then((content) {
@@ -25,7 +28,7 @@ class HtmlAssemblerTransformer extends Transformer {
         return tag.attributes['import'].isNotEmpty;
       }).map((tag) {
         var src = tag.attributes['import'];
-        var srcAssetId = uriToAssetId(id, src, transform.logger, tag.sourceSpan,errorOnAbsolute:false);
+        var srcAssetId = uriToAssetId(fragmentId, src, transform.logger, tag.sourceSpan,errorOnAbsolute:false);
         transform.logger.info("Importing " + srcAssetId.path);
 
         return transform.readInputAsString(srcAssetId).then((source) {

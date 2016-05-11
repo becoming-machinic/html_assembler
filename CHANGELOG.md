@@ -1,6 +1,7 @@
 ## 0.0.3
 
 * Update dependencies.
+* Force all import paths to be absolute to the package root. This resolves the issue nested imports would import in an unpredictable order.
 
 ## 0.0.2
 
